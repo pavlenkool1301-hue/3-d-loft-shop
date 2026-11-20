@@ -1,13 +1,305 @@
+
 <!DOCTYPE html>
 <html lang="uk">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>3D Loft</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>3D Phys De Loft — Самоклеючі панелі</title>
+
+<style>
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f5eee4;
+  color: #49382b;
+}
+
+header {
+  background: #e8d8c3;
+  padding: 18px 6%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  border-bottom: 1px solid #d2b98f;
+}
+
+.logo {
+  font-size: 23px;
+  font-weight: bold;
+  color: #76552f;
+  letter-spacing: 1px;
+}
+
+.logo span {
+  display: block;
+  font-size: 11px;
+  letter-spacing: 3px;
+  margin-top: 5px;
+}
+
+.cart {
+  background: linear-gradient(135deg,#e7c17b,#c99b4d);
+  color: #a51e25;
+  border: 1px solid #c49b58;
+  border-radius: 25px;
+  padding: 12px 22px;
+  font-weight: bold;
+  font-size: 15px;
+  text-decoration: none;
+}
+
+.hero {
+  text-align: center;
+  padding: 75px 20px;
+  background: linear-gradient(135deg,#f8f1e8,#e9d9c4);
+}
+
+.hero h1 {
+  font-size: clamp(30px,6vw,48px);
+  color: #74532f;
+  margin-bottom: 18px;
+}
+
+.hero p {
+  font-size: 17px;
+  line-height: 1.7;
+  max-width: 550px;
+  margin: 0 auto 28px;
+  color: #77634f;
+}
+
+.gold-button {
+  display: inline-block;
+  background: linear-gradient(135deg,#e9c783,#c99a4c);
+  color: #a51e25;
+  padding: 15px 27px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  border: 1px solid #c69c59;
+}
+
+section {
+  padding: 55px 6%;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 30px;
+  color: #76552f;
+  margin-bottom: 12px;
+}
+
+.section-subtitle {
+  text-align: center;
+  color: #88745f;
+  margin-bottom: 35px;
+}
+
+.categories {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+  gap: 22px;
+  max-width: 1050px;
+  margin: auto;
+}
+
+.category {
+  background: #fffaf3;
+  border: 1px solid #e5d2b7;
+  border-radius: 15px;
+  padding: 28px 20px;
+  text-align: center;
+  box-shadow: 0 5px 15px #76552f12;
+}
+
+.category h3 {
+  color: #76552f;
+  font-size: 23px;
+  margin-bottom: 12px;
+}
+
+.category p {
+  color: #88745f;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.colors {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 9px;
+  margin: 18px 0;
+}
+
+.color {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  border: 1px solid #b8a58e;
+}
+
+.green {background:#55764b;}
+.lightgreen {background:#a9bd87;}
+.brown {background:#79513a;}
+.white {background:#fff;border:1px solid #bbb;}
+.grey {background:#929292;}
+.black {background:#222;}
+
+.about {
+  background: #eadcc9;
+  text-align: center;
+}
+
+.about p {
+  max-width: 650px;
+  margin: auto;
+  line-height: 1.8;
+  color: #705b46;
+}
+
+.cart-section {
+  text-align: center;
+  background: #fffaf3;
+}
+
+.cart-section p {
+  color: #88745f;
+  margin: 15px 0;
+}
+
+footer {
+  background: #765a3c;
+  color: #fff4e5;
+  text-align: center;
+  padding: 25px 15px;
+  line-height: 1.8;
+  font-size: 14px;
+}
+
+@media(max-width:500px) {
+  header {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .hero {
+    padding: 55px 18px;
+  }
+
+  section {
+    padding: 42px 18px;
+  }
+}
+</style>
 </head>
+
 <body>
-  <h1>3D Loft — Самоклеючі панелі</h1>
-  <h2>Наш магазин скоро відкриється!</h2>
-  <p>Ласкаво просимо!</p>
+
+<header>
+  <div class="logo">
+    3D PHYS DE LOFT
+    <span>САМОКЛЕЮЧІ ПАНЕЛІ</span>
+  </div>
+  <a class="cart" href="#cart">Кошик</a>
+</header>
+
+<main>
+  <div class="hero">
+    <h1>Затишок починається зі стін</h1>
+    <p>
+      Самоклеючі декоративні панелі для твого дому.
+      Обирай товщину, колір та дизайн, який тобі подобається.
+    </p>
+    <a href="#catalog" class="gold-button">
+      Переглянути каталог
+    </a>
+  </div>
+
+  <section id="catalog">
+    <h2 class="section-title">Наш каталог</h2>
+    <p class="section-subtitle">
+      Обирай потрібну товщину панелей
+    </p>
+
+    <div class="categories">
+
+<div class="category">
+        <h3>Панелі 2 мм</h3>
+        <p>Самоклеючі декоративні панелі товщиною 2 мм.</p>
+        <div class="colors">
+          <span class="color green"></span>
+          <span class="color lightgreen"></span>
+          <span class="color brown"></span>
+          <span class="color white"></span>
+          <span class="color grey"></span>
+          <span class="color black"></span>
+        </div>
+        <a href="#cart" class="gold-button">Обрати</a>
+      </div>
+
+      <div class="category">
+        <h3>Панелі 3 мм</h3>
+        <p>Самоклеючі декоративні панелі товщиною 3 мм.</p>
+        <div class="colors">
+          <span class="color green"></span>
+          <span class="color lightgreen"></span>
+          <span class="color brown"></span>
+          <span class="color white"></span>
+          <span class="color grey"></span>
+          <span class="color black"></span>
+        </div>
+        <a href="#cart" class="gold-button">Обрати</a>
+      </div>
+
+      <div class="category">
+        <h3>Панелі 5 мм</h3>
+        <p>Самоклеючі декоративні панелі товщиною 5 мм.</p>
+        <div class="colors">
+          <span class="color green"></span>
+          <span class="color lightgreen"></span>
+          <span class="color brown"></span>
+          <span class="color white"></span>
+          <span class="color grey"></span>
+          <span class="color black"></span>
+        </div>
+        <a href="#cart" class="gold-button">Обрати</a>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="about">
+    <h2 class="section-title">3D Phys De Loft</h2>
+    <p>
+      Створи особливу атмосферу у своєму домі
+      разом із декоративними самоклеючими панелями.
+      Обирай свій стиль та оформлюй простір із задоволенням!
+    </p>
+  </section>
+
+  <section class="cart-section" id="cart">
+    <h2 class="section-title">Кошик</h2>
+    <p>Тут буде твій кошик із вибраними товарами.</p>
+    <p>Каталог товарів і оформлення замовлення додамо наступним етапом.</p>
+  </section>
+</main>
+
+<footer>
+  <strong>3D PHYS DE LOFT</strong>
+  <br>
+  Самоклеючі декоративні панелі
+  <br>
+  Дякуємо, що обираєте нас!
+</footer>
+
 </body>
 </html>
